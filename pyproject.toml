@@ -1,0 +1,19 @@
+[project]
+name = "weather-forecast-application"
+version = "0.1.0"
+description = "Web Application for visualizing weather forecast"
+readme = "README.md"
+requires-python = "~=3.12"
+dependencies = [
+    "dash==2.15.0",
+    "dash-extensions==1.0.12",
+    "dash-iconify==0.1.2",
+    "dash-mantine-components==0.12.1",
+    "pandas>=2.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.1.0",
+    "ruff>=0.9.4",
+]

@@ -1,0 +1,23 @@
+# .pre-commit-config.yaml
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: check-toml
+    -   id: check-added-large-files
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.9
+    hooks:
+      - id: ruff
+        entry: ruff check --force-exclude --no-cache
+        args: [--fix]
+        language: python
+        types_or: [cython, pyi, python]
+      - id: ruff-format
+        entry: ruff format --force-exclude --no-cache
+        language: python
+        types_or: [cython, pyi, python]
